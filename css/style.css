@@ -1,0 +1,349 @@
+/* ===================================================
+   DUMBLEDORE BOUTIQUE - Main Stylesheet
+   Premium Luxury Ecommerce Design
+   =================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-gold: #d4af37;
+    --primary-light-gold: #f0e68c;
+    --dark-bg: #0a0e27;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-light: #ffffff;
+    --text-muted: #b0b0b0;
+    --border-gold: rgba(212, 175, 55, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-light);
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1a3a 50%, #0f0f1e 100%);
+    min-height: 100vh;
+}
+
+/* ===================================================
+   GLOBAL ANIMATIONS
+   =================================================== */
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ===================================================
+   BUTTONS
+   =================================================== */
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-light-gold) 100%);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+    color: var(--dark-bg);
+}
+
+.btn-primary-custom:active {
+    transform: translateY(0);
+}
+
+/* ===================================================
+   CARDS & CONTAINERS
+   =================================================== */
+
+.card-premium {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-gold);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-premium:hover {
+    border-color: var(--primary-gold);
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.2);
+    transform: translateY(-5px);
+}
+
+/* ===================================================
+   FORM ELEMENTS
+   =================================================== */
+
+.form-control, .form-select {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus, .form-select:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    color: var(--text-light);
+}
+
+/* ===================================================
+   NAVBAR
+   =================================================== */
+
+.navbar {
+    background: rgba(10, 14, 39, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-light-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* ===================================================
+   BADGES & LABELS
+   =================================================== */
+
+.badge-premium {
+    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-light-gold) 100%);
+    color: var(--dark-bg);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* ===================================================
+   PRODUCT CARDS
+   =================================================== */
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-gold);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-gold);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.product-image {
+    height: 250px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 3s infinite;
+}
+
+/* ===================================================
+   RATINGS
+   =================================================== */
+
+.rating {
+    color: var(--primary-gold);
+    font-size: 12px;
+}
+
+.rating-empty {
+    color: rgba(212, 175, 55, 0.3);
+}
+
+/* ===================================================
+   PRICING
+   =================================================== */
+
+.price-current {
+    color: #f0e68c;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.price-original {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.discount-badge {
+    background: var(--primary-gold);
+    color: var(--dark-bg);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/* ===================================================
+   ALERTS
+   =================================================== */
+
+.alert-premium-danger {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    color: #ff6b6b;
+    border-radius: 10px;
+}
+
+.alert-premium-success {
+    background: rgba(40, 167, 69, 0.1);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+    color: #51cf66;
+    border-radius: 10px;
+}
+
+.alert-premium-info {
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    border-radius: 10px;
+}
+
+/* ===================================================
+   FOOTER
+   =================================================== */
+
+footer {
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(15, 15, 30, 0.95) 100%);
+    border-top: 1px solid var(--border-gold);
+}
+
+/* ===================================================
+   SCROLLBAR STYLING
+   =================================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(10, 14, 39, 0.95);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f0e68c;
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN
+   =================================================== */
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+    }
+
+    .btn-primary-custom {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .price-current {
+        font-size: 18px;
+    }
+
+    .btn-primary-custom {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .form-control {
+        font-size: 13px;
+        padding: 9px 12px;
+    }
+}

@@ -1,0 +1,79 @@
+/* Admin Styling */
+
+.admin-sidebar {
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(20, 20, 45, 0.95) 100%);
+    min-height: 100vh;
+    border-right: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.admin-nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.admin-nav-link:hover {
+    background: rgba(212, 175, 55, 0.1);
+    color: #d4af37;
+}
+
+.admin-nav-link.active {
+    background: rgba(212, 175, 55, 0.2);
+    color: #d4af37;
+    border-left: 3px solid #d4af37;
+}
+
+.admin-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.admin-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.2);
+}
+
+.admin-table {
+    color: #ffffff;
+}
+
+.admin-table thead th {
+    color: #d4af37;
+    border-color: rgba(212, 175, 55, 0.2);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.admin-table tbody tr {
+    border-color: rgba(212, 175, 55, 0.1);
+}
+
+.admin-table tbody tr:hover {
+    background: rgba(212, 175, 55, 0.08);
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-value {
+    color: #d4af37;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin-top: 10px;
+}
